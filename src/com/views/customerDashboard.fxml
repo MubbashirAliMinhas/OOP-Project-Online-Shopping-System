@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="715.0" prefWidth="1240.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.CustomerDashboard">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="675.0" prefWidth="250.0" styleClass="anchor-pane-dashboard" AnchorPane.bottomAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <VBox layoutY="50.0" prefHeight="365.0" prefWidth="203.0" styleClass="vbox-dashboard">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" styleClass="button-dashboard-selected-active" text="HOME" />
+                  <Button fx:id="cartButton" mnemonicParsing="false" onAction="#switchToCart" prefHeight="0.0" styleClass="button-dashboard" text="CART" />
+                  <Button fx:id="orderHistoryButton" mnemonicParsing="false" onAction="#switchToOrderHistory" styleClass="button-dashboard" text="ORDERS HISTORY" />
+                  <Button fx:id="accountButton" mnemonicParsing="false" onAction="#switchToAccount" styleClass="button-dashboard" text="ACCOUNT" />
+                  <Button fx:id="walletButton" mnemonicParsing="false" onAction="#switchToWallet" styleClass="button-dashboard" text="WALLET" />
+                  <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#switchToLogIn" styleClass="button-dashboard" stylesheets="@../styles/styles.css" text="LOG OUT" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <TabPane layoutX="305.0" layoutY="45.0" prefHeight="615.0" prefWidth="875.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="allTab" text="ALL">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane fx:id="scrollPaneAll" prefHeight="580.0" prefWidth="875.0" AnchorPane.leftAnchor="0.5" AnchorPane.topAnchor="0.5">
+                           <content>
+                              <FlowPane fx:id="flowPaneAll" prefHeight="575.0" prefWidth="855.0" styleClass="flow-pane" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="electronicsTab" text="ELECTRONICS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane fx:id="scrollPane2" prefHeight="580.0" prefWidth="875.0" AnchorPane.leftAnchor="0.5" AnchorPane.topAnchor="0.5">
+                           <content>
+                              <FlowPane fx:id="flowPane2" prefHeight="575.0" prefWidth="855.0" styleClass="flow-pane" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="clothingTab" text="CLOTHING">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane fx:id="scrollPane3" prefHeight="580.0" prefWidth="875.0" AnchorPane.leftAnchor="0.5" AnchorPane.topAnchor="0.5">
+                           <content>
+                              <FlowPane fx:id="flowPane3" prefHeight="575.0" prefWidth="855.0" styleClass="flow-pane" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="cosmeticsTab" text="COSMETICS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane fx:id="scrollPane4" prefHeight="580.0" prefWidth="875.0" AnchorPane.leftAnchor="0.5" AnchorPane.topAnchor="0.5">
+                           <content>
+                              <FlowPane fx:id="flowPane4" prefHeight="575.0" prefWidth="855.0" styleClass="flow-pane" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="closeButton" layoutX="1169.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeAction" styleClass="button-close" text="✕" />
+      <TextField fx:id="searchField" layoutX="942.0" layoutY="46.0" promptText="Search" styleClass="text-field-login" />
+      <Button fx:id="searchButton" layoutX="1098.0" layoutY="46.0" mnemonicParsing="false" onAction="#searchAction" prefHeight="28.0" prefWidth="30.0" styleClass="button-search" text="🔎" />
+      <Button fx:id="revertButton" layoutX="1132.0" layoutY="46.0" mnemonicParsing="false" onAction="#revertAction" prefHeight="28.0" prefWidth="30.0" styleClass="button-revert" text="⭮" />
+   </children>
+</AnchorPane>

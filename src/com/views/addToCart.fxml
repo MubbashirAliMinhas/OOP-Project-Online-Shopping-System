@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="340.0" prefWidth="600.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.AddToCartController">
+   <children>
+      <Button fx:id="proceedButton" layoutX="455.0" layoutY="263.0" mnemonicParsing="false" onAction="#proceedAction" styleClass="button-style-2" text="PROCEED" />
+      <Button fx:id="cancelButton" layoutX="330.0" layoutY="263.0" mnemonicParsing="false" onAction="#cancelAction" styleClass="button-style-2" text="CANCEL" />
+      <Label fx:id="quantityMessageLabel" layoutX="46.0" layoutY="270.0" text="Product quantity in the cart:" />
+      <Label fx:id="productQuantityInCart" layoutX="203.0" layoutY="269.0" prefHeight="18.0" prefWidth="25.0" text="0" />
+      <VBox alignment="CENTER_LEFT" layoutX="270.0" layoutY="70.0" prefHeight="150.0" prefWidth="120.0" styleClass="vbox-cart">
+         <children>
+            <Label fx:id="nameLabel" styleClass="label-cart-name" text="Label" />
+            <Label fx:id="priceLabel" styleClass="label-cart-price" text="Label" />
+            <HBox fx:id="discountHBox" prefHeight="100.0" prefWidth="200.0" styleClass="hbox-cart-discount" visible="false">
+               <children>
+                  <Label fx:id="oldPriceLabel" styleClass="label-cart-price-old" text="Label" />
+                  <Label fx:id="discountLabel" styleClass="label-cart-discount" text="Label" />
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="115.0">
+               <children>
+                  <Button fx:id="decButton" mnemonicParsing="false" onAction="#decAction" prefHeight="26.0" prefWidth="25.0" styleClass="button-quantity-1" text="–" />
+                  <TextField fx:id="incField" styleClass="label-inc" text="1" />
+                  <Button fx:id="incButton" mnemonicParsing="false" onAction="#incAction" styleClass="button-quantity-2" text="+" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Rectangle fx:id="imageView" arcHeight="15.0" arcWidth="15.0" fill="TRANSPARENT" height="150.0" layoutX="90.0" layoutY="70.0" stroke="TRANSPARENT" strokeType="INSIDE" width="150.0" />
+   </children>
+</AnchorPane>

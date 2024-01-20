@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootSignUp" prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignupController">
+   <children>
+      <VBox fx:id="signUpVbox" layoutX="180.0" layoutY="100.0" prefHeight="200.0" prefWidth="240.0" styleClass="vbox" stylesheets="@styles.css">
+         <children>
+            <TextField fx:id="nameFieldSignUp" promptText="Enter your name" />
+            <TextField fx:id="emailFieldSignUp" promptText="Email" />
+            <PasswordField fx:id="passwordFieldSignUp" promptText="Password" />
+            <Button layoutX="10.0" layoutY="61.0" mnemonicParsing="false" onAction="#signUpAction" styleClass="button-login" stylesheets="@styles.css" text="CREATE ACCOUNT" />
+            <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#switchToLogIn" styleClass="button-login" stylesheets="@styles.css" text="GO BACK" />
+         </children>
+      </VBox>
+      <Button layoutX="548.0" layoutY="1.0" mnemonicParsing="false" onAction="#closeWindow" styleClass="button-close" stylesheets="@styles.css" text="CLOSE" />
+   </children>
+</AnchorPane>

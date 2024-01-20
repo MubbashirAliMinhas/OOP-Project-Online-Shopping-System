@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="rootLogIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.LoginController">
+   <children>
+      <Rectangle fx:id="backgroundImage" arcHeight="18.0" arcWidth="18.0" height="500.0" layoutX="20.0" layoutY="20.0" stroke="TRANSPARENT" strokeType="INSIDE" width="920.0" />
+      <VBox fx:id="logInVbox" layoutX="330.0" layoutY="170.0" prefHeight="200.0" prefWidth="300.0" styleClass="vbox-login" stylesheets="@../styles/styles.css">
+         <children>
+            <TextField fx:id="emailFieldLogIn" promptText="Email" styleClass="text-field-login-1" />
+            <PasswordField fx:id="passwordFieldLogIn" prefHeight="30.0" prefWidth="260.0" promptText="Password" styleClass="text-field-login-1" />
+            <Button fx:id="logInButton" mnemonicParsing="false" onAction="#logInAction" styleClass="button-login" stylesheets="@../styles/styles.css" text="LOG IN" />
+            <Button fx:id="signUpButton" layoutX="10.0" layoutY="61.0" mnemonicParsing="false" onAction="#switchToSignUp" styleClass="button-login" stylesheets="@../styles/styles.css" text="SIGN UP" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="validationLabel" text="Label" textFill="WHITE" visible="false" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="292.0" layoutY="113.0" styleClass="label-login" text="LOG IN TO YOUR ACCOUNT" textFill="WHITE" />
+      <Button fx:id="closeButton" layoutX="889.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeAction" style="-fx-text-fill: white;" styleClass="button-close" text="✕" />
+   </children>
+</AnchorPane>

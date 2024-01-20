@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="715.0" prefWidth="1240.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.WalletController">
+   <children>
+      <VBox layoutX="594.0" layoutY="244.0" prefHeight="200.0" prefWidth="100.0" styleClass="vbox-login">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="hbox-wallet">
+               <children>
+                  <Label styleClass="label-wallet" text="Balance:" />
+                  <Label fx:id="balanceLabel" styleClass="label-wallet" text="Label" />
+               </children>
+            </HBox>
+            <TextField fx:id="amountField" promptText="Enter Amount" styleClass="text-field-login" />
+            <Button fx:id="depositButton" mnemonicParsing="false" onAction="#depositAction" styleClass="button-login" text="DEPOSIT" />
+            <Button fx:id="withdrawButton" mnemonicParsing="false" onAction="#withdrawAction" styleClass="button-login" text="WITHDRAW" />
+            <Label fx:id="validationLabel" text="Label" visible="false" />
+         </children>
+      </VBox>
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="675.0" prefWidth="250.0" styleClass="anchor-pane-dashboard">
+         <children>
+            <VBox layoutY="50.0" prefHeight="365.0" prefWidth="203.0" styleClass="vbox-dashboard">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#switchToCustomerDashboard" styleClass="button-dashboard" text="HOME" />
+                  <Button fx:id="cartButton" mnemonicParsing="false" onAction="#switchToCart" prefHeight="0.0" styleClass="button-dashboard" text="CART" />
+                  <Button fx:id="orderHistoryButton" mnemonicParsing="false" onAction="#switchToOrderHistory" styleClass="button-dashboard" text="ORDERS HISTORY" />
+                  <Button fx:id="accountButton" mnemonicParsing="false" onAction="#switchToAccount" styleClass="button-dashboard" text="ACCOUNT" />
+                  <Button fx:id="walletButton" mnemonicParsing="false" styleClass="button-dashboard-selected-active" text="WALLET" />
+                  <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#switchToLogIn" styleClass="button-dashboard" stylesheets="@../styles/styles.css" text="LOG OUT" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Button fx:id="closeButton" layoutX="1169.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeAction" styleClass="button-close" text="✕" />
+   </children>
+</AnchorPane>

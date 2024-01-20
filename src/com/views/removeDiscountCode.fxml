@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="715.0" prefWidth="1240.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.RemoveDiscountCodeController">
+   <children>
+      <Button fx:id="removeButton" layoutX="772.0" layoutY="620.0" mnemonicParsing="false" onAction="#removeAction" styleClass="button-login-small" text="REMOVE" />
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="675.0" prefWidth="250.0" styleClass="anchor-pane-dashboard">
+         <children>
+            <VBox layoutY="50.0" prefHeight="250.0" prefWidth="250.0" styleClass="vbox-dashboard">
+               <children>
+                  <Button fx:id="inventoryButton" mnemonicParsing="false" onAction="#switchToInventory" prefHeight="46.0" prefWidth="230.0" styleClass="button-dashboard" text="INVENTORY" />
+                  <Button fx:id="discountCodesButton" mnemonicParsing="false" onAction="#switchToDiscountCodes" styleClass="button-dashboard-selected-passive" text="DISCOUNT CODES" />
+                  <Button fx:id="salesButton" mnemonicParsing="false" onAction="#switchToSales" styleClass="button-dashboard" text="SALES" />
+                  <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#switchToLogIn" prefHeight="46.0" prefWidth="301.0" styleClass="button-dashboard" text="LOG OUT" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="270.0" layoutY="20.0" prefHeight="675.0" prefWidth="200.0" styleClass="anchor-pane-dashboard-secondary">
+         <children>
+            <VBox layoutY="50.0" prefHeight="195.0" prefWidth="203.0" styleClass="vbox-dashboard-secondary">
+               <children>
+                  <Button fx:id="addDiscountCodeButton" mnemonicParsing="false" onAction="#switchToAddDiscountCode" styleClass="button-dashboard-secondary" text="ADD CODE" />
+                  <Button fx:id="removeDiscountCodeButton" mnemonicParsing="false" styleClass="button-dashboard-secondary-selected" text="REMOVE CODE" />
+                  <Button fx:id="updateDiscountCodeButton" mnemonicParsing="false" onAction="#switchToUpdateDiscountCode1" prefHeight="101.0" styleClass="button-dashboard-secondary" text="UPDATE CODE" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Button fx:id="closeButton" layoutX="1169.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeAction" styleClass="button-close" text="✕" />
+      <TableView fx:id="tableView" layoutX="490.0" layoutY="90.0" prefHeight="500.0" prefWidth="715.0">
+         <columns>
+            <TableColumn fx:id="checkBoxes" prefWidth="39.20001220703125" text="Product" />
+            <TableColumn fx:id="discountCodes" prefWidth="654.0" text="Product" />
+         </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="533.0" layoutY="91.0" prefHeight="40.0" prefWidth="650.0" styleClass="hbox-item-header">
+         <children>
+            <Label prefHeight="20.0" prefWidth="45.0" styleClass="label-bold" text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="220.0" styleClass="label-bold" text="DISCOUNT CODE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="100.0" styleClass="label-bold" text="AMOUNT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="80.0" styleClass="label-bold" text="DISCOUNT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="80.0" styleClass="label-bold" text="QUANTITY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="60.0" styleClass="label-bold" text="TYPE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="715.0" prefWidth="1240.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.SalesController">
+   <children>
+      <ScrollPane layoutX="320.0" layoutY="130.0" prefHeight="500.0" prefWidth="860.0">
+         <content>
+            <FlowPane fx:id="flowPane" prefHeight="490.0" prefWidth="835.0" styleClass="flow-pane-sales" />
+         </content>
+      </ScrollPane>
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="675.0" prefWidth="250.0" styleClass="anchor-pane-dashboard">
+         <children>
+            <VBox layoutY="50.0" prefHeight="250.0" prefWidth="250.0" styleClass="vbox-dashboard">
+               <children>
+                  <Button fx:id="inventoryButton" mnemonicParsing="false" onAction="#switchToInventory" prefHeight="46.0" prefWidth="230.0" styleClass="button-dashboard" text="INVENTORY" />
+                  <Button fx:id="discountCodesButton" mnemonicParsing="false" onAction="#switchToDiscountCodes" styleClass="button-dashboard" text="DISCOUNT CODES" />
+                  <Button fx:id="salesButton" mnemonicParsing="false" styleClass="button-dashboard-selected-active" text="SALES" />
+                  <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#switchToLogIn" prefHeight="46.0" prefWidth="301.0" styleClass="button-dashboard" text="LOG OUT" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Button fx:id="closeButton" layoutX="1169.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeAction" styleClass="button-close" text="✕" />
+      <HBox layoutX="325.0" layoutY="90.0" prefHeight="40.0" prefWidth="830.0" styleClass="hbox-sales-header">
+         <children>
+            <Pane prefHeight="40.0" prefWidth="40.0" />
+            <Label prefHeight="18.0" prefWidth="220.0" styleClass="label-bold" text="NAME">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="220.0" styleClass="label-bold" text="EMAIL">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="70.0" styleClass="label-bold" text="ORDER ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="140.0" styleClass="label-bold" text="PAYMENT METHOD">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="70.0" styleClass="label-bold" text="DATE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

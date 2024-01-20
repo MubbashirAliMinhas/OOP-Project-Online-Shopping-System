@@ -1,0 +1,319 @@
+.root {
+    -fx-background-color: white;
+}
+
+.button-login {
+    -fx-background-color: rgb(77, 34, 230);
+    -fx-background-radius: 5px;
+    -fx-pref-width: 260px;
+    -fx-text-fill: white;
+}
+
+.button-login:hover {
+    -fx-background-color: rgb(85, 87, 233);
+}
+
+.button-login:pressed {
+    -fx-background-color: rgb(59, 26, 182);
+}
+
+.button-dashboard {
+    -fx-background-color: rgb(77, 34, 230);
+    -fx-background-radius: 0px;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-pref-width: 200px;
+}
+
+.button-dashboard:hover {
+    -fx-background-color: rgb(85, 87, 233);
+}
+
+.button-dashboard:pressed {
+    -fx-background-color: rgb(59, 26, 182);
+}
+
+.text-field-login {
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-color: rgb(77, 34, 230);
+}
+
+.vbox-login {
+    -fx-alignment: center;
+    -fx-spacing: 15px;
+    -fx-padding: 20px;
+    -fx-pref-height: 200px;
+    -fx-pref-width: 300px;
+}
+
+.vbox-inventory-main {
+    -fx-alignment: center;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 250px;
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-spacing: 20px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+}
+
+.vbox-inventory-details {
+    -fx-alignment: center-left;
+    -fx-pref-width: 200px;
+    -fx-spacing: 5px;
+    -fx-padding: 5px;
+}
+
+.vbox-customer-dashboard {
+    -fx-background-color: rgb(77, 34, 230);
+    -fx-alignment: center;
+    -fx-spacing: 8px;
+    -fx-padding: 0px;
+}
+
+.anchor-pane-customer-dashboard {
+    -fx-background-color: rgb(77, 34, 230);
+}
+
+.anchor-pane-add-image {
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}
+
+.hbox-main {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+    -fx-pref-width: 450px;
+    -fx-pref-height: 60px;
+}
+
+.hbox-product {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-pref-width: 690px;
+    -fx-pref-height: 60px;
+}
+
+.hbox-product-header {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-pref-width: 690px;
+    -fx-pref-height: 30px;
+}
+
+.hbox-place-order {
+    -fx-alignment: center-right;
+    -fx-spacing: 20px;
+    -fx-padding: 20px;
+    -fx-background-color: white;
+}
+
+.hbox-order-history {
+    -fx-background-color: white;
+    -fx-pref-width: 400px;
+    -fx-pref-height: 50px;
+    -fx-alignment: center;
+}
+
+.hbox-discount-codes {
+    -fx-background-color: white;
+    -fx-pref-width: 400px;
+    -fx-pref-height: 50px;
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}
+
+.label-login {
+    -fx-font-size: 30px;
+}
+
+.label-inventory-1 {
+    -fx-font-size: 15px;
+}
+
+.label-inventory-2 {
+    -fx-font-size: 15px;
+    -fx-text-fill: rgb(77, 34, 230);
+}
+
+.label-product-name {
+    -fx-font-size: 14px;
+    -fx-pref-width: 400px;
+}
+
+.label-product-name-header {
+    -fx-font-size: 14px;
+    -fx-pref-width: 440px;
+}
+
+.label-product-price {
+    -fx-font-size: 14px;
+    -fx-pref-width: 80px;
+}
+
+.label-product-quantity {
+    -fx-font-size: 14px;
+    -fx-pref-width: 70px;
+}
+
+.flow-pane {
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
+    -fx-padding: 5px;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 2px;
+    -fx-border-color: #555;
+}
+
+.check-box:hover .box {
+    -fx-border-color: black;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.check-box:selected .box {
+    -fx-background-color: rgb(97, 46, 240);;
+    -fx-border-color: rgb(97, 46, 240);;
+}
+
+.check-box:selected:hover .box {
+    -fx-border-color: black;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: white;
+    -fx-font-size: 14px;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-width: 0.5px;
+    -fx-border-color: black;
+}
+
+.table-view .table-cell {
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+    -fx-pref-height: 70px;
+    -fx-alignment: center-left;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+.table-view .table-row-cell:selected:focused {
+    -fx-text-fill: white;
+    -fx-background-color: rgb(77, 34, 230);
+    -fx-background-radius: 5px; 
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: white;
+    -fx-border-width: 0px;
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: white;
+    -fx-border-width: 0px;
+}
+
+.list-view {
+    -fx-background-color: rgb(235, 235, 235);;
+    -fx-border-width: 0.5px;
+    -fx-border-color: black;
+}
+
+.list-view .list-cell {
+    -fx-background-color: rgb(235, 235, 235);
+    -fx-border-width: 0px;
+    -fx-pref-height: 70px;
+    -fx-alignment: center;
+}
+
+.list-view .list-cell:filled {
+    -fx-background-color: rgb(235, 235, 235);
+    -fx-border-width: 0px;
+}
+
+.list-view .list-cell:selected:focused {
+    -fx-text-fill: black;
+    -fx-background-color: rgb(77, 34, 230);
+    -fx-background-radius: 5px;
+}
+
+.list-view .list-cell:odd {
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+}
+
+.list-view .list-cell:even {
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+}
+
+.scroll-bar {
+    -fx-background-color: rgb(230, 230, 230);
+}
+
+.scroll-bar:vertical {
+    -fx-pref-width: 15px;
+}
+
+.scroll-bar:horizontal {
+    -fx-pref-height: 15px;
+}
+
+.scroll-bar .thumb{
+    -fx-background-color: #aaa;
+}
+
+.scroll-bar .thumb:hover{
+    -fx-background-color: rgb(185, 184, 184);
+}
+
+.scroll-bar .thumb:pressed{
+    -fx-background-color: rgb(145, 145, 145);
+}
+
+.scroll-bar .increment-button {
+    -fx-background-color: rgb(230, 230, 230);
+    -fx-alignment: center;
+    -fx-pref-width: 15px;
+    -fx-pref-height: 15px;
+}
+
+.scroll-bar .increment-button:hover {
+    -fx-background-color: rgb(207, 206, 206);
+}
+
+.scroll-bar .increment-button:pressed {
+    -fx-background-color: rgb(190, 190, 190);
+}
+
+.scroll-bar .decrement-button {
+    -fx-background-color: rgb(230, 230, 230);
+    -fx-alignment: center;
+    -fx-pref-width: 15px;
+    -fx-pref-height: 15px;
+}
+
+.scroll-bar .decrement-button:hover {
+    -fx-background-color: rgb(207, 206, 206);
+}
+
+.scroll-bar .decrement-button:pressed {
+    -fx-background-color: rgb(190, 190, 190);
+}

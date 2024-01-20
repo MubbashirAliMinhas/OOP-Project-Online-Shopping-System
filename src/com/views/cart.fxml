@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="715.0" prefWidth="1240.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.CartController">
+   <children>
+      <Button fx:id="placeOrderButton" layoutX="850.0" layoutY="620.0" mnemonicParsing="false" onAction="#switchToPlaceOrder" styleClass="button-login-small" text="PLACE ORDER" />
+      <Button fx:id="removeButton" layoutX="672.0" layoutY="620.0" mnemonicParsing="false" onAction="#removeAction" styleClass="button-login-small" text="REMOVE" />
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="675.0" prefWidth="250.0" styleClass="anchor-pane-dashboard">
+         <children>
+            <VBox layoutY="50.0" prefHeight="365.0" prefWidth="203.0" styleClass="vbox-dashboard">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#switchToCustomerDashboard" styleClass="button-dashboard" text="HOME" />
+                  <Button fx:id="cartButton" mnemonicParsing="false" prefHeight="0.0" styleClass="button-dashboard-selected-active" text="CART" />
+                  <Button fx:id="orderHistoryButton" mnemonicParsing="false" onAction="#switchToOrderHistory" styleClass="button-dashboard" text="ORDERS HISTORY" />
+                  <Button fx:id="accountButton" mnemonicParsing="false" onAction="#switchToAccount" styleClass="button-dashboard" text="ACCOUNT" />
+                  <Button fx:id="walletButton" mnemonicParsing="false" onAction="#switchToWallet" styleClass="button-dashboard" text="WALLET" />
+                  <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#switchToLogIn" styleClass="button-dashboard" stylesheets="@../styles/styles.css" text="LOG OUT" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Button fx:id="closeButton" layoutX="1169.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeAction" styleClass="button-close" text="✕" />
+      <TableView fx:id="tableView" layoutX="360.0" layoutY="89.0" prefHeight="500.0" prefWidth="775.0">
+         <columns>
+            <TableColumn fx:id="checkBoxes" prefWidth="35.199981689453125" text="Product" />
+            <TableColumn fx:id="products" prefWidth="719.2000122070312" text="Product" />
+         </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="399.0" layoutY="90.0" prefHeight="40.0" prefWidth="715.0" styleClass="hbox-item-header">
+         <children>
+            <Label prefHeight="20.0" prefWidth="45.0" styleClass="label-bold" text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="295.0" styleClass="label-bold" text="PRODUCT NAME">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="130.0" styleClass="label-bold" text="TOTAL">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="80.0" styleClass="label-bold" text="QUANTITY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="80.0" styleClass="label-bold" text="CATEGORY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="updateButton" layoutX="494.0" layoutY="620.0" mnemonicParsing="false" onAction="#updateAction" styleClass="button-login-small" text="UPDATE" />
+   </children>
+</AnchorPane>

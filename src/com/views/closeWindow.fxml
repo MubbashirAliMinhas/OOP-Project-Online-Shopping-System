@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.CloseWindowController">
+   <children>
+      <Label fx:id="closeLabel" layoutX="100.0" layoutY="70.0" text="Are you sure you wan't to close?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelButton" layoutX="260.0" layoutY="130.0" mnemonicParsing="false" onAction="#cancelAction" prefWidth="120.0" styleClass="button-style-2" text="CANCEL" />
+      <Button fx:id="closeButton" layoutX="150.0" layoutY="130.0" mnemonicParsing="false" onAction="#closeAction" prefWidth="120.0" styleClass="button-style-2" text="CLOSE" />
+   </children>
+</AnchorPane>

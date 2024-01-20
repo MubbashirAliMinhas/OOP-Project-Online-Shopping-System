@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="715.0" prefWidth="1240.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ViewCustomerOrderController">
+   <children>
+      <AnchorPane prefHeight="540.0" prefWidth="200.0" styleClass="anchor-pane-customer-dashboard">
+         <children>
+            <VBox layoutY="40.0" prefHeight="11.0" prefWidth="203.0" styleClass="vbox-customer-dashboard" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="goBackButton" layoutX="290.0" layoutY="40.0" mnemonicParsing="false" onAction="#switchToSales" styleClass="button-go-back" />
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="675.0" prefWidth="250.0" styleClass="anchor-pane-dashboard">
+         <children>
+            <VBox layoutY="50.0" prefHeight="250.0" prefWidth="250.0" styleClass="vbox-dashboard">
+               <children>
+                  <Button fx:id="inventoryButton" mnemonicParsing="false" onAction="#switchToInventory" prefHeight="46.0" prefWidth="230.0" styleClass="button-dashboard" text="INVENTORY" />
+                  <Button fx:id="discountCodesButton" mnemonicParsing="false" onAction="#switchToDiscountCodes" styleClass="button-dashboard" text="DISCOUNT CODES" />
+                  <Button fx:id="salesButton" mnemonicParsing="false" styleClass="button-dashboard-selected-active" text="SALES" />
+                  <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#switchToLogIn" prefHeight="46.0" prefWidth="301.0" styleClass="button-dashboard" text="LOG OUT" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Button fx:id="closeButton" layoutX="1169.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeAction" styleClass="button-close" text="✕" />
+      <HBox layoutX="363.0" layoutY="590.0" prefHeight="50.0" prefWidth="750.0" styleClass="hbox-place-order" stylesheets="@../styles/styles.css">
+         <children>
+            <Label text="Total Amount:" />
+            <Label fx:id="totalAmountLabel" prefHeight="18.0" prefWidth="70.0" text="Label" />
+         </children>
+      </HBox>
+      <TableView fx:id="tableView" layoutX="360.0" layoutY="90.0" prefHeight="490.0" prefWidth="775.0">
+         <columns>
+            <TableColumn fx:id="products" prefWidth="755.1999206542969" text="Product" />
+         </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="363.0" layoutY="91.0" prefHeight="40.0" prefWidth="750.0" styleClass="hbox-item-header">
+         <children>
+            <Label prefHeight="20.0" prefWidth="45.0" styleClass="label-bold" text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="295.0" styleClass="label-bold" text="PRODUCT NAME">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="130.0" styleClass="label-bold" text="TOTAL">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="80.0" styleClass="label-bold" text="QUANTITY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="80.0" styleClass="label-bold" text="CATEGORY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
